@@ -547,29 +547,33 @@ footer p {
         z-index:10001;
     }
 
+@media (max-width: 768px){
+
     nav{
-        position:absolute;
-        top:100%;
-        left:0;
-        width:100%;
-        background:rgba(0,0,0,0.98);
-        backdrop-filter:blur(12px);
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
 
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        gap:20px;
+        background: rgba(0,0,0,0.98);
+        backdrop-filter: blur(12px);
 
-        padding:25px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
 
-        max-height:0;
-        overflow:hidden;
-        transition:0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s ease;
     }
 
     nav.active{
-        max-height:300px;
+        max-height: 300px;
+        padding: 25px 0;
     }
+}
 
     nav a{
         margin:0;
