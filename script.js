@@ -31,3 +31,11 @@ document.addEventListener("keydown", function (e) {
         closeImage();
     }
 });
+
+function toggleMenu() {
+    document.getElementById("nav-menu").classList.toggle("active");
+}
+
+function closeMenu() {
+    document.getElementById("nav-menu").classList.remove("active");
+}
