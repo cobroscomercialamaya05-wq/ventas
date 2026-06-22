@@ -109,7 +109,7 @@ nav a:hover::after {
         rgba(0,0,0,0.60) 50%,
         rgba(0,0,0,0.10)
     ),
-    url('img/foto8.jpeg') center/cover no-repeat;
+    url('foto8.jpeg') center/cover no-repeat;
 }
 
 .hero-content {
