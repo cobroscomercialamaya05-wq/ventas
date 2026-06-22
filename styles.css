@@ -500,19 +500,26 @@ footer p {
     }
 }
 
-/* FIX HERO EN MÓVIL */
+/* FIX HERO EN MÓVIL (CORRECTO) */
 @media (max-width: 768px) {
 
     .hero {
-        height: 100vh;
-        min-height: 600px;
+        min-height: 100svh; /* mejor que 100vh en móvil moderno */
+        height: auto;
 
-        background-position: center;
+        background-image:
+            linear-gradient(to right,
+                rgba(0,0,0,0.95) 10%,
+                rgba(0,0,0,0.60) 50%,
+                rgba(0,0,0,0.10)
+            ),
+            url('img/foto8.jpeg');
+
         background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
 
-        /* mejora visual en móvil */
-        padding: 0 20px;
+        padding: 120px 20px 80px 20px;
     }
 
     .hero-content {
