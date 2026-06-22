@@ -96,7 +96,7 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
     height: 100vh;
     display: flex;
@@ -104,12 +104,12 @@ nav a:hover::after {
     padding: 0 8%;
 
     background:
-    linear-gradient(to right,
-        rgba(0,0,0,0.95) 10%,
-        rgba(0,0,0,0.60) 50%,
-        rgba(0,0,0,0.10)
-    ),
-    url('foto8.jpeg') center/cover no-repeat;
+        linear-gradient(to right,
+            rgba(0,0,0,0.95) 10%,
+            rgba(0,0,0,0.60) 50%,
+            rgba(0,0,0,0.10)
+        ),
+        url('foto8.jpeg') center/cover no-repeat;
 }
 
 .hero-content {
@@ -149,12 +149,12 @@ nav a:hover::after {
     font-size: 14px;
 }
 
-/* BOTÓN */
+/* BOTONES */
 button {
     cursor: pointer;
 }
 
-/* BOTÓN GOLD */
+/* GOLD */
 .btn-gold {
     background: transparent;
     border: 1px solid rgba(212,175,55,0.6);
@@ -171,19 +171,15 @@ button {
 
     display: inline-block;
     margin-top: 10px;
-
-    position: relative;
-    z-index: 10;
 }
 
 .btn-gold:hover {
     background: #D4AF37;
     color: black;
     transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(212,175,55,0.2);
 }
 
-/* BOTÓN DARK */
+/* DARK */
 .btn-dark {
     background: transparent;
     border: 1px solid rgba(255,255,255,0.25);
@@ -192,7 +188,7 @@ button {
     border-radius: 50px;
 }
 
-/* PRODUCTOS */
+/* ================= PRODUCTOS ================= */
 .productos {
     padding: 120px 8%;
 }
@@ -210,7 +206,6 @@ button {
     gap: 25px;
 }
 
-/* PRODUCTO */
 .producto {
     width: 100%;
     max-width: 280px;
@@ -221,16 +216,12 @@ button {
     border-radius: 22px;
 
     border: 1px solid rgba(212,175,55,0.08);
-    position: relative;
-    overflow: hidden;
-
     transition: 0.4s;
 }
 
 .producto:hover {
     transform: translateY(-10px);
     border-color: rgba(212,175,55,0.4);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
 }
 
 .producto img {
@@ -246,76 +237,9 @@ button {
 .producto p {
     font-size: 22px;
     color: #D4AF37;
-    margin: 8px 0;
 }
 
-/* CONFIANZA */
-.confianza {
-    padding: 120px 8%;
-    text-align: center;
-}
-
-.confianza h2 {
-    font-size: 55px;
-    color: #D4AF37;
-    margin-bottom: 60px;
-}
-
-.contenedor-confianza {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-}
-
-.contenedor-confianza .box {
-    background: #111;
-    padding: 30px;
-    border-radius: 15px;
-    font-size: 20px;
-    border: 1px solid rgba(212,175,55,0.12);
-    transition: 0.3s;
-}
-
-.contenedor-confianza .box:hover {
-    transform: translateY(-8px);
-    border-color: rgba(212,175,55,0.4);
-}
-
-/* CTA */
-.cta {
-    padding: 120px 8%;
-    text-align: center;
-    background: linear-gradient(to right, #000, #111);
-    border-top: 1px solid rgba(212,175,55,0.15);
-}
-
-.cta h2 {
-    font-size: 60px;
-    color: #D4AF37;
-}
-
-.cta p {
-    font-size: 22px;
-    color: #ccc;
-    margin: 20px 0 30px;
-}
-
-.cta a {
-    display: inline-block;
-    padding: 18px 45px;
-    background: #25D366;
-    color: white;
-    border-radius: 50px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.cta a:hover {
-    transform: scale(1.05);
-}
-
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer {
     text-align: center;
     padding: 60px 8%;
@@ -331,10 +255,9 @@ footer h3 {
 footer p {
     color: #aaa;
     font-size: 18px;
-    margin-top: 10px;
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -347,38 +270,10 @@ footer p {
 
     text-decoration: none;
     font-weight: bold;
-
     z-index: 9999;
-    transition: 0.3s;
 }
 
-.whatsapp-float:hover {
-    transform: scale(1.08);
-}
-
-/* RESPONSIVE */
-@media (max-width: 1200px) {
-    .contenedor-productos {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
-    .contenedor-productos {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .contenedor-productos {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* =========================
-   LIGHTBOX CORREGIDO
-========================= */
-
+/* ================= LIGHTBOX ================= */
 #lightbox {
     position: fixed;
     inset: 0;
@@ -389,14 +284,10 @@ footer p {
     align-items: center;
 
     z-index: 99999;
-    cursor: zoom-out;
 
     opacity: 0;
     visibility: hidden;
-
-    transition: opacity 0.25s ease, visibility 0.25s ease;
-
-    backdrop-filter: blur(8px);
+    transition: 0.25s;
 }
 
 #lightbox.show {
@@ -408,51 +299,9 @@ footer p {
     max-width: 92%;
     max-height: 92%;
     border-radius: 18px;
-
-    transform: scale(0.85);
-    opacity: 0;
-
-    transition: all 0.25s ease;
 }
 
-#lightbox.show img {
-    transform: scale(1);
-    opacity: 1;
-}
-
-
-
-
-
-.confianza-sub {
-    font-size: 20px;
-    color: #bbb;
-    max-width: 800px;
-    margin: 0 auto 50px auto;
-    text-align: center;
-    line-height: 1.6;
-}
-
-.contenedor-confianza .box {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.contenedor-confianza .box strong {
-    font-size: 20px;
-    color: #D4AF37;
-}
-
-.contenedor-confianza .box span {
-    font-size: 16px;
-    color: #ccc;
-    line-height: 1.4;
-}
-
-
-/* HAMBURGUESA */
+/* ================= HAMBURGUESA ================= */
 .menu-toggle {
     display: none;
     font-size: 32px;
@@ -460,7 +309,7 @@ footer p {
     cursor: pointer;
 }
 
-/* RESPONSIVE MENU */
+/* MENU MOBILE */
 @media (max-width: 768px) {
 
     header {
@@ -477,7 +326,6 @@ footer p {
         right: 0;
         width: 100%;
         background: rgba(0,0,0,0.95);
-        backdrop-filter: blur(10px);
 
         display: flex;
         flex-direction: column;
@@ -498,26 +346,19 @@ footer p {
         margin: 0;
         font-size: 20px;
     }
-}
 
-/* FIX HERO EN MÓVIL (CORRECTO) */
-@media (max-width: 768px) {
-
+    /* HERO MOBILE FIX REAL */
     .hero {
-        min-height: 100svh; /* mejor que 100vh en móvil moderno */
+        min-height: 100svh;
         height: auto;
 
-        background-image:
+        background:
             linear-gradient(to right,
                 rgba(0,0,0,0.95) 10%,
                 rgba(0,0,0,0.60) 50%,
                 rgba(0,0,0,0.10)
             ),
-            url('img/foto8.jpeg');
-
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+            url('foto8.jpeg') center/cover no-repeat;
 
         padding: 120px 20px 80px 20px;
     }
