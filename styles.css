@@ -109,7 +109,7 @@ nav a:hover::after {
         rgba(0,0,0,0.60) 50%,
         rgba(0,0,0,0.10)
     ),
-    url('foto8.jpeg') center/cover no-repeat;
+    url('img/foto8.jpeg') center/cover no-repeat;
 }
 
 .hero-content {
@@ -450,3 +450,54 @@ footer p {
     color: #ccc;
     line-height: 1.4;
 }
+
+
+/* HAMBURGUESA */
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    color: #D4AF37;
+    cursor: pointer;
+}
+
+/* RESPONSIVE MENU */
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.95);
+        backdrop-filter: blur(10px);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 20px;
+        padding: 20px 0;
+
+        transform: translateY(-150%);
+        transition: 0.3s ease;
+    }
+
+    nav.active {
+        transform: translateY(0);
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 20px;
+    }
+}
+
+
