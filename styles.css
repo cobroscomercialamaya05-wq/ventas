@@ -500,4 +500,22 @@ footer p {
     }
 }
 
+/* FIX HERO EN MÓVIL */
+@media (max-width: 768px) {
 
+    .hero {
+        height: 100vh;
+        min-height: 600px;
+
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        /* mejora visual en móvil */
+        padding: 0 20px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+}
