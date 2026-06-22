@@ -460,9 +460,19 @@ footer p {
     cursor: pointer;
 }
 
-/* RESPONSIVE MENU */
+/* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
 
+    header {
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 10001;
+    }
+
+    /* HERO */
     .hero {
         min-height: auto;
         height: auto;
@@ -520,9 +530,8 @@ footer p {
         padding: 10px 16px;
         font-size: 12px;
     }
-}
 
-@media (max-width: 768px) {
+    /* PRODUCTOS */
     .productos h2 {
         font-size: 42px;
     }
@@ -534,22 +543,10 @@ footer p {
     .producto p {
         font-size: 18px;
     }
-}
 
-@media (max-width: 768px){
-
-    header{
-        padding:15px 20px;
-    }
-
-    .menu-toggle{
-        display:block;
-        z-index:10001;
-    }
-
-@media (max-width: 768px){
-
-    nav{
+    /* MENÚ MOBILE */
+    nav {
+        display: none;
         position: fixed;
         top: 80px;
         left: 0;
@@ -559,25 +556,19 @@ footer p {
         background: rgba(0,0,0,0.98);
         backdrop-filter: blur(12px);
 
+        padding: 25px 0;
+    }
+
+    nav.active {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
-
-        max-height: 0;
-        overflow: hidden;
-        transition: 0.3s ease;
     }
 
-    nav.active{
-        max-height: 300px;
-        padding: 25px 0;
-    }
-}
-
-    nav a{
-        margin:0;
-        font-size:20px;
-        padding:10px 0;
+    nav a {
+        margin: 0;
+        font-size: 20px;
+        padding: 10px 0;
     }
 }
